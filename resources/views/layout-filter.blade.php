@@ -51,7 +51,7 @@
                         <tr>
                             <td scope="col">{{$product->product->product_name}}</td>
                             @foreach ($arrChart as $ac)
-                                <td scope="col">{{number_format((float)$ac->result/$reportRowTable->count(), 2, '.', '')}}</td>
+                                <td scope="col">{{number_format((float)$ac->result/$reportRowTable->count(), 2, '.', '')}}%</td>
                             @endforeach
                         </tr>
                     @endforeach
