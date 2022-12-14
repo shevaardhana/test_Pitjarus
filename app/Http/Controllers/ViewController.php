@@ -64,6 +64,7 @@ class ViewController extends Controller
                 $reportRow = ReportProduct::join('store as s', 'report_product.store_id', '=', 's.store_id')
                                 ->select('compliance', 'product_id', 's.store_id', 's.area_id')
                                 ->where('area_id', '=', $area)
+                                ->whereBetween('tanggal', [$dateFrom, $dateTo])
                                 ->get()
                                 ->count();
             }
